@@ -1,0 +1,12 @@
+15:14:09.558 [main] [INFO mycompany.log4j.Main] - Essa mensagem de info n vai aparecer
+15:14:09.560 [main] [ERROR mycompany.log4j.Main] - Uma mensagem de erro
+15:14:35.922 [main] [INFO mycompany.log4j.Main] - Essa mensagem de info n vai aparecer
+15:14:35.935 [main] [ERROR mycompany.log4j.Main] - Uma mensagem de erro
+15:28:11.637 [main] [INFO mycompany.log4j.Main] - Essa mensagem de info n vai aparecer
+15:28:11.638 [main] [ERROR mycompany.log4j.Main] - Uma mensagem de erro
+15:29:21.003 [main] [INFO mycompany.log4j.Main] - Essa mensagem de info n vai aparecer
+15:29:21.005 [main] [ERROR mycompany.log4j.Main] - Uma mensagem de erro
+15:33:47.043 [main] [INFO mycompany.log4j.Main] - Essa mensagem de info n vai aparecer
+15:33:47.045 [main] [ERROR mycompany.log4j.Main] - Uma mensagem de erro
+15:36:02.530 [main] [INFO mycompany.log4j.Main] - Essa mensagem de info n vai aparecer
+15:36:02.535 [main] [ERROR mycompany.log4j.Main] - Uma mensagem de erro

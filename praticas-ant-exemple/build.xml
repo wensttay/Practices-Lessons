@@ -1,0 +1,18 @@
+<project name="exemplo-ant-sala" default="compile">
+	<!-- <property name="usuario" value="Wensttay" /> -->
+	<property file="./build.properties" />
+
+
+	<!-- <target name = "alvo1" depends="alvo2">
+		<echo>Olá ${usuario}</echo>
+	</target>
+
+	<target name = "alvo2" depends="alvo3">
+		<echo>Olá Mundo! ${os}</echo>
+	</target> -->
+
+	<target name="compile">
+		<javac srcdir='src' destdir='target' />
+	</target>
+
+</project>

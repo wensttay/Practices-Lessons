@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout
+                pattern="%d{HH:mm:ss.SSS} [%t] [%level %logger{3}] - %msg%n"/>
+        </Console>
+        
+        <File name="FileAppender" fileName="log/app.log">
+            <PatternLayout
+                pattern="%d{HH:mm:ss.SSS} [%t] [%level %logger{3}] - %msg%n"/>
+        </File>
+        <SMTP 
+            name="MailAppender" subject="Error Log"
+            to="wensttay2@gmail.com"
+            smtpDebug="true"
+            smtpProtocol="smtps"
+            smtpHost="smtp.gmail.com" smtpPort="465" bufferSize="50"
+            smtpUsername="tpraticas"
+            smtpPassword="ptr123456">
+        </SMTP>
+    </Appenders>
+    
+    <Loggers>
+        <Logger name="com.mycompany" level="info" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="FileAppender"/>
+            <AppenderRef ref="MailAppender"/>
+        </Logger>
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>
