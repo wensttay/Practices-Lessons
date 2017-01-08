@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <h:head>
+        <title>Iniciando com JSF</title>
+    </h:head>
+
+    <h:body>
+        <ui:composition template="template/default.xhtml">
+
+            <ui:define name="menu">
+                <nav>
+                    <ul class="nav nav-pills">
+                        <li role="presentation" ><a href="index.xhtml">Cadastro</a></li>
+                        <li role="presentation" class="active"><a href="#">Gerenciamento</a></li>
+                    </ul>
+                </nav>
+            </ui:define>
+
+            <ui:define name="content">
+
+                <div class="container" style="min-height: 650px; padding: 50px">
+
+                    <div class="row col-md-6" style='padding: 30px;'>
+
+                        <div class="panel panel-primary">
+                            <div class="panel-heading text-center"><h3>#{clientesMB.selecionado.nome}</h3></div>
+                            <div class="panel-body">
+                                <p><strong>CPF: </strong>#{clientesMB.selecionado.cpf}</p>
+                                <p><strong>Email:</strong> #{clientesMB.selecionado.email}</p>
+                                <p><strong>Telefone:</strong> #{clientesMB.selecionado.telefone}</p>
+                                <p><strong>Observações: </strong></p>
+                                <p>#{clientesMB.selecionado.observacoes}</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </ui:define>
+
+        </ui:composition>   
+    </h:body>
+
+</html>

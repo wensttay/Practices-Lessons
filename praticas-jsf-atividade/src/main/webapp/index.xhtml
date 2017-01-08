@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <h:head>
+        <title>Iniciando com JSF</title>
+    </h:head>
+
+    <h:body>
+        <ui:composition template="template/default.xhtml">
+
+            <ui:define name="menu">
+                <nav>
+                    <ul class="nav nav-pills">
+                        <li role="presentation" class="active"><a href="#">Cadastro</a></li>
+                        <li role="presentation"><a href="gerenciamento.xhtml">Gerenciamento</a></li>
+                    </ul>
+                </nav>
+            </ui:define>
+
+            <ui:define name="content">
+                <h:form>
+                    <fieldset>
+                        <!-- Form Name -->
+                        <legend>Novo Cliente</legend>
+                        <h:messages errorStyle="list-style-type: none; padding: 15px; background-color: rgba(255,0,0,0.6); border-radius : 5px; margin-bottom:10px;" class="text-center"/>
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="nome">Nome:</label>
+
+                            <h:inputText value="#{cadastroClienteMB.cliente.nome}" id="nome" class="form-control input-md" required="true" />
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="sobrenome">Email:</label>
+
+                            <h:inputText value="#{cadastroClienteMB.cliente.email}" id="sobrenome" class="form-control input-md" required="true">
+                                <f:validator validatorId="emailValidator" />
+                            </h:inputText>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="sobrenome">CPF:</label>
+                            <h:inputText value="#{cadastroClienteMB.cliente.cpf}" id="cpf"
+                                         class="form-control input-md" required="true">
+                                <f:validator validatorId="cpfValidador" />
+                            </h:inputText>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="telefone-fixo">Telefone fixo:</label>
+                            <h:inputText value="#{cadastroClienteMB.cliente.telefone}" id="telefone-fixo"
+                                         class="form-control input-md" required="true"/>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="celular">Celular:</label>
+                            <h:inputText value="#{cadastroClienteMB.cliente.celular}" id="celular"
+                                         class="form-control input-md" required="true"/>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="observacao">Observação:</label>
+
+                            <h:inputTextarea value="#{cadastroClienteMB.cliente.observacoes}" id="observacao"
+                                             class="form-control input-md" rows="5" required="true"/>
+                        </div>
+
+                        <div class="form-group">
+                            <h:commandButton id="submit" action="#{cadastroClienteMB.cadastrar()}"
+                                             value="Submit" class="btn btn-primary pull-right"/>
+                        </div>
+
+                    </fieldset>
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+    </h:body>
+</html>
