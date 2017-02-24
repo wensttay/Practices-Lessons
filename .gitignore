@@ -13,3 +13,5 @@ hs_err_pid*
 
 # Ignorar arquivos da pasta target
 /target/*
+/praticas-cdi-example/target/
+/praticas-Log4j-example/target/
